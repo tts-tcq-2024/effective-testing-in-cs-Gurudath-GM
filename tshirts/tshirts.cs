@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 
 namespace TshirtSpace {
     class Tshirt {
@@ -13,10 +12,14 @@ namespace TshirtSpace {
             }
         }
         static void Main(string[] args) {
-            Debug.Assert(Size(37) == "S");
-            Debug.Assert(Size(40) == "M");
-            Debug.Assert(Size(43) == "L");
-            Console.WriteLine( "All is well (maybe!)");
+            // Test cases to verify the Size method
+            Test.Size_ShouldReturn_Error_ForNegativeMeasurements(-1, "Measurement cannot be negative.");
+            Test.Size_ShouldReturn_Small_ForMeasurementsLessThanOrEqualTo38(37, "S");
+            Test.Size_ShouldReturn_Small_ForMeasurementsLessThanOrEqualTo38(38, "S");
+            Test.Size_ShouldReturn_Medium_ForMeasurementsBetween38And42(39, "M");
+            Test.Size_ShouldReturn_Medium_ForMeasurementsBetween38And42(41, "M");
+            Test.Size_ShouldReturn_Large_ForMeasurements42AndAbove(42, "L");
+            Test.Size_ShouldReturn_Large_ForMeasurements42AndAbove(43, "L");
         }
     }
 }
