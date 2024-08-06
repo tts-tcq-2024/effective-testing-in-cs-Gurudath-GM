@@ -1,5 +1,3 @@
-using MisalignedSpaceTests;
-
 namespace MisalignedSpace
 {
     class Misaligned
