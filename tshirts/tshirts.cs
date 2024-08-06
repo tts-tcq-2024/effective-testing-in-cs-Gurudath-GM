@@ -2,7 +2,7 @@ using System;
 
 namespace TshirtSpace {
     class Tshirt {
-        static string Size(int cms) {
+        public static string Size(int cms) {
             if(cms < 38) {
                 return "S";
             } else if(cms > 38 && cms < 42) {
