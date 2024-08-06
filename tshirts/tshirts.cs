@@ -13,13 +13,13 @@ namespace TshirtSpace {
         }
         static void Main(string[] args) {
             // Test cases to verify the Size method
-            Test.Size_ShouldReturn_Error_ForNegativeMeasurements(-1, "Measurement cannot be negative.");
-            Test.Size_ShouldReturn_Small_ForMeasurementsLessThanOrEqualTo38(37, "S");
-            Test.Size_ShouldReturn_Small_ForMeasurementsLessThanOrEqualTo38(38, "S");
-            Test.Size_ShouldReturn_Medium_ForMeasurementsBetween38And42(39, "M");
-            Test.Size_ShouldReturn_Medium_ForMeasurementsBetween38And42(41, "M");
-            Test.Size_ShouldReturn_Large_ForMeasurements42AndAbove(42, "L");
-            Test.Size_ShouldReturn_Large_ForMeasurements42AndAbove(43, "L");
+            TestTshirtSize.Size_ShouldReturn_Error_ForNegativeMeasurements(-1, "Measurement cannot be negative.");
+            TestTshirtSize.Size_ShouldReturn_Small_ForMeasurementsLessThanOrEqualTo38(37, "S");
+            TestTshirtSize.Size_ShouldReturn_Small_ForMeasurementsLessThanOrEqualTo38(38, "S");
+            TestTshirtSize.Size_ShouldReturn_Medium_ForMeasurementsBetween38And42(39, "M");
+            TestTshirtSize.Size_ShouldReturn_Medium_ForMeasurementsBetween38And42(41, "M");
+            TestTshirtSize.Size_ShouldReturn_Large_ForMeasurements42AndAbove(42, "L");
+            TestTshirtSize.Size_ShouldReturn_Large_ForMeasurements42AndAbove(43, "L");
         }
     }
 }
