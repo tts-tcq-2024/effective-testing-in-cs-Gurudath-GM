@@ -13,7 +13,7 @@ namespace TshirtSpace {
         }
         static void Main(string[] args) {
             // Test cases to verify the Size method
-            TestTshirtSize.Size_ShouldReturn_Error_ForNegativeMeasurements(-1, "Measurement cannot be negative.");
+            TestTshirtSize.Size_ShouldReturn_Exception_ForNegativeMeasurements(-1, "Measurement cannot be negative.");
             TestTshirtSize.Size_ShouldReturn_Small_ForMeasurementsLessThanOrEqualTo38(37, "S");
             TestTshirtSize.Size_ShouldReturn_Small_ForMeasurementsLessThanOrEqualTo38(38, "S");
             TestTshirtSize.Size_ShouldReturn_Medium_ForMeasurementsBetween38And42(39, "M");
