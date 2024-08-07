@@ -26,7 +26,7 @@ namespace TshirtSpace {
             CheckTest_status(isPassed);
         }
 
-        public static void Size_ShouldReturn_Error_ForNegativeMeasurements(int cms, string expected)
+        public static void Size_ShouldReturn_Exception_ForNegativeMeasurements(int cms, string expected)
         {
             string actual = Tshirt.Size(cms);
             isPassed = Debug.Equals(actual, expected);
@@ -38,7 +38,7 @@ namespace TshirtSpace {
             if (isPassed)
                 Console.WriteLine("Test passed");
             else
-                Console.WriteLine("Test failed");
+                throw new Exception("Test failed");
         }
     }
 }
