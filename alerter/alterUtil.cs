@@ -1,22 +1,25 @@
-public interface INetworkAlert
+namespace AlerterSpace
 {
-    int SendAlert(float celsius);
-}
-
-public class NetworkAlertStub : INetworkAlert
-{
-    public int SendAlert(float celsius)
+    public interface INetworkAlert
     {
-        Console.WriteLine($"Sending alert for temperature: {celsius} Celsius.");
-        return 500;
+        int SendAlert(float celsius);
     }
-}
 
-public class NetworkAlert : INetworkAlert
-{
-    public int SendAlert(float celsius)
+    public class NetworkAlertStub : INetworkAlert
     {
-        Console.WriteLine($"Sending alert for temperature: {celsius} Celsius.");
-        return 200;
+        public int SendAlert(float celsius)
+        {
+            Console.WriteLine($"Sending alert for temperature: {celsius} Celsius.");
+            return 500;
+        }
+    }
+
+    public class NetworkAlert : INetworkAlert
+    {
+        public int SendAlert(float celsius)
+        {
+            Console.WriteLine($"Sending alert for temperature: {celsius} Celsius.");
+            return 200;
+        }
     }
 }
