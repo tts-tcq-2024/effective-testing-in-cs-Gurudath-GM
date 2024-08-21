@@ -20,6 +20,8 @@ namespace TshirtSpace {
             TestTshirtSize.Size_ShouldReturn_Medium_ForMeasurementsBetween38And42(41, "M");
             TestTshirtSize.Size_ShouldReturn_Large_ForMeasurements42AndAbove(42, "L");
             TestTshirtSize.Size_ShouldReturn_Large_ForMeasurements42AndAbove(43, "L");
+
+            return 0;
         }
     }
 }
