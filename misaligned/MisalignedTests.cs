@@ -8,22 +8,13 @@ namespace MisalignedSpace
         public static void TestPrintColorMapAndReturnsPairsCount()
         {
             bool isColorCombinationOkay, isPairCountOkay;
-            string actualColorCombination, expectedColorCombination;
-            var originalConsoleOut = Console.Out;
+            string expectedColorCombination;
 
-            // Redirect Console output to capture it
-            var stringWriter = new StringWriter();
-            Console.SetOut(stringWriter);
             int result = Misaligned.PrintColorMap();
-
-            actualColorCombination = stringWriter.ToString();
             expectedColorCombination = GenerateExpectedOutput();
 
-            isColorCombinationOkay = Debug.Equals(actualColorCombination, expectedColorCombination);
+            isColorCombinationOkay = Debug.Equals(Misaligned.actualColorCombination, expectedColorCombination);
             isPairCountOkay = Debug.Equals(25, result);
-
-            Console.SetOut(originalConsoleOut);
-            Console.WriteLine(actualColorCombination);
 
             if (!isColorCombinationOkay || !isPairCountOkay)
                 Console.WriteLine("Test failed, because either combination of color or pair count is failed.");
