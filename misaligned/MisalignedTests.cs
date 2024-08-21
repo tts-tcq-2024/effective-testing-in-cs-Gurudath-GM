@@ -17,7 +17,7 @@ namespace MisalignedSpace
             isPairCountOkay = Debug.Equals(25, result);
 
             if (!isColorCombinationOkay || !isPairCountOkay)
-                Console.WriteLine("Test failed, because either combination of color or pair count is failed.");
+                Console.WriteLine("Test failed, because either combination of color or pair count.");
             else
                 Console.WriteLine("Test passed.");
         }
