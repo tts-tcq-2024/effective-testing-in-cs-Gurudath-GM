@@ -2,6 +2,7 @@ namespace MisalignedSpace
 {
     class Misaligned
     {
+        public static string actualColorCombination = "";
         public static int PrintColorMap()
         {
             string[] majorColors = { "White", "Red", "Black", "Yellow", "Violet" };
@@ -11,7 +12,7 @@ namespace MisalignedSpace
             {
                 for (j = 0; j < 5; j++)
                 {
-                    Console.WriteLine("{0} | {1} | {2}", i * 5 + j, majorColors[i], minorColors[i]);
+                    actualColorCombination += ($"{i * 5 + j} | {majorColors[i]} | {minorColors[i]}\r\n");
                 }
             }
             return i * j;
